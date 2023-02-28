@@ -3,7 +3,4 @@ media/
 .env
 *.pyc
 __pycache__
-backend/__pycache__/settings.cpython-310.pyc
-backend/__pycache__/settings.cpython-310.pyc
-backend/__pycache__/settings.cpython-310.pyc
-backend/__pycache__/urls.cpython-310.pyc
+
