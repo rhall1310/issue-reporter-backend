@@ -9,4 +9,6 @@ class ReportAdmin(admin.ModelAdmin):
     ]
 
 
+admin.site.site_header = "Issue Reporter Admin"
+
 admin.site.register(Report, ReportAdmin)
