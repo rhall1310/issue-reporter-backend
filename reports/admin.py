@@ -5,7 +5,8 @@ from .models import Report
 class ReportAdmin(admin.ModelAdmin):
     fieldsets = [
         ("User Info", {"fields": ["title", "first_name", "last_name"]}),
-        ("Report Details", {"fields": ["category", "details", "address"]}),
+        ("Report Details", {"fields": ["category", "details"]}),
+        ("Location Details", {"fields": ["easting", "northing", "address"]}),
     ]
 
 
