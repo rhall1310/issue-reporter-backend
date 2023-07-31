@@ -7,17 +7,20 @@ from django_filters import rest_framework as filters
 
 # Create your views here.
 
+
 class ReportViewSet(viewsets.ModelViewSet):
-    parser_classes = (FormParser,MultiPartParser)
+    parser_classes = (FormParser, MultiPartParser)
     serializer_class = ReportSerializer
     queryset = Report.objects.all()
-    
+
+
 class ResolvedViewSet(viewsets.ModelViewSet):
-    parser_classes = (FormParser,MultiPartParser)
+    parser_classes = (FormParser, MultiPartParser)
     serializer_class = ReportSerializer
     queryset = Report.objects.filter(resolved=True)
 
+
 class OpenViewSet(viewsets.ModelViewSet):
-    parser_classes = (FormParser,MultiPartParser)
+    parser_classes = (FormParser, MultiPartParser)
     serializer_class = ReportSerializer
-    queryset = Report.objects.filter(resolved__isnull=True)   
+    queryset = Report.objects.filter(resolved=False)
