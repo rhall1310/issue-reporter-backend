@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from rest_framework import viewsets, generics
 from rest_framework.parsers import FormParser, MultiPartParser
+
+
 from .serializers import ReportSerializer
 from .models import Report
 from django_filters import rest_framework as filters
@@ -9,6 +11,7 @@ from django_filters import rest_framework as filters
 
 
 class ReportViewSet(viewsets.ModelViewSet):
+
     parser_classes = (FormParser, MultiPartParser)
     serializer_class = ReportSerializer
     queryset = Report.objects.all()
