@@ -4,7 +4,10 @@ from .models import Report
 # Register your models here.
 class ReportAdmin(admin.ModelAdmin):
     fieldsets = [
-        ("User Info", {"fields": ["title", "first_name", "last_name"]}),
+        (
+            "User Info",
+            {"fields": ["title", "first_name", "last_name", "email", "phone_number"]},
+        ),
         ("Report Details", {"fields": ["category", "details"]}),
         ("Location Details", {"fields": ["easting", "northing", "address"]}),
     ]
