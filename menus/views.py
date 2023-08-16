@@ -5,6 +5,7 @@ from rest_framework.authentication import (
     BasicAuthentication,
     TokenAuthentication,
 )
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .serializers import CategorySerializer
 from .models import Category
 from django_filters import rest_framework as filters
@@ -13,11 +14,13 @@ from django_filters import rest_framework as filters
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
     filterset_fields = {"parent": ["exact", "isnull"]}
 
 
 class TopCatViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = CategorySerializer
     queryset = Category.objects.filter(parent__isnull=True)
