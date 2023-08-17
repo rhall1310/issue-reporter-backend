@@ -5,11 +5,20 @@ from .models import Report
 class ReportAdmin(admin.ModelAdmin):
     fieldsets = [
         (
+            "Report Details",
+            {
+                "fields": [
+                    "category",
+                    "details",
+                ]
+            },
+        ),
+        ("Location Details", {"fields": ["lat", "lon", "address"]}),
+        ("Report Details", {"fields": ["resolved"]}),
+        (
             "User Info",
             {"fields": ["title", "first_name", "last_name", "email", "phone_number"]},
         ),
-        ("Report Details", {"fields": ["category", "details"]}),
-        ("Location Details", {"fields": ["easting", "northing", "address"]}),
     ]
 
 
