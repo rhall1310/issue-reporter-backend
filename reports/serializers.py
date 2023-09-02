@@ -5,4 +5,16 @@ from .models import Report
 class ReportSerializer(serializers.ModelSerializer):
     class Meta:
         model = Report
-        fields = ("id", "category", "address", "details", "lat", "lon")
+        fields = (
+            "id",
+            "category",
+            "address",
+            "details",
+            "lat",
+            "lon",
+            "title",
+            "first_name",
+            "last_name",
+            "email",
+            "phone_number",
+        )
