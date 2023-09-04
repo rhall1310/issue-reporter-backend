@@ -10,6 +10,7 @@ class ReportSerializer(serializers.ModelSerializer):
             "category",
             "address",
             "details",
+            "photo",
             "lat",
             "lon",
             "title",

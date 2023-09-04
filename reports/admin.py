@@ -14,7 +14,7 @@ class ReportAdmin(admin.ModelAdmin):
             },
         ),
         ("Location Details", {"fields": ["lat", "lon", "address"]}),
-        ("Report Details", {"fields": ["resolved"]}),
+        ("Report Details", {"fields": ["resolved", "photo"]}),
         (
             "User Info",
             {"fields": ["title", "first_name", "last_name", "email", "phone_number"]},
