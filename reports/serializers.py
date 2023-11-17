@@ -19,3 +19,17 @@ class ReportSerializer(serializers.ModelSerializer):
             "email",
             "phone_number",
         )
+
+
+class PublicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Report
+        fields = (
+            "id",
+            "category",
+            "address",
+            "details",
+            "photo",
+            "lat",
+            "lon",
+        )
