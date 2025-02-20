@@ -10,7 +10,7 @@ router = DefaultRouter()
 router.register(r"all", ReportViewSet, basename="all/")
 router.register(r"resolved", ResolvedViewSet, basename="resolved")
 router.register(r"open", OpenViewSet, basename="open")
-router.register(r"public", PublicViewSet, basename="open")
+router.register(r"public", PublicViewSet, basename="public")
 
 
 urlpatterns = [
