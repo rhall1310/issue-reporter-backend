@@ -18,6 +18,8 @@ class ReportSerializer(serializers.ModelSerializer):
             "last_name",
             "email",
             "phone_number",
+            "resolved",
+            "public",
         )
 
 

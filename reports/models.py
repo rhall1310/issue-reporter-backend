@@ -17,6 +17,7 @@ class Report(models.Model):
     email = models.EmailField(max_length=120, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     resolved = models.BooleanField(null=True, default=False)
+    public = models.BooleanField(null=True, default=False)
 
 
 # Create your models here.

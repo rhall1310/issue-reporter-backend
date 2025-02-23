@@ -29,4 +29,4 @@ class OpenViewSet(viewsets.ModelViewSet):
 class PublicViewSet(viewsets.ModelViewSet):
     parser_classes = (FormParser, MultiPartParser)
     serializer_class = PublicSerializer
-    queryset = Report.objects.filter(resolved=False)
+    queryset = Report.objects.filter(public=True)
